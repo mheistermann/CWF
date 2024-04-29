@@ -4,7 +4,7 @@ project(BGAL)
 
 
 # Default Build_type RELEASE
-set(CMAKE_BUILD_TYPE RELEASE)
+#set(CMAKE_BUILD_TYPE RELEASE)
 # CXX STANDARD
 set(CMAKE_CXX_STANDARD 14)
 # Set Version
