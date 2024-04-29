@@ -369,7 +369,10 @@ namespace BGAL
 	
 
 		double Movement = 0.01;
-		ifstream inPoints("..\\..\\data\\n" + to_string(num_sites)+"_" + modelname + "_inputPoints.xyz");
+		ifstream inPoints("../../data/n" + to_string(num_sites)+"_" + modelname + "_inputPoints.xyz");
+        if (!inPoints.good()) {
+            throw std::runtime_error("coudl not open inPoints file");
+        }
 		
 		vector<Eigen::Vector3d> Pts,Nors;
 		char cccc;
