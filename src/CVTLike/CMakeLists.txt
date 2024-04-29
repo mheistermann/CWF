@@ -5,9 +5,9 @@ set(BGAL_CVTLike_SRC
 		CVT.cpp
 		)
 # Get static lib
-find_package(OpenMP REQUIRED)
+find_package(OpenMP COMPONENTS CXX REQUIRED)
 add_library(CVTLike STATIC ${BGAL_CVTLike_SRC})
-target_link_libraries(CVTLike Algorithm BaseShape Model Tessellation2D Tessellation3D Optimization OpenMP::OpenMP_CXX ${Boost_LIBRARIES})
+target_link_libraries(CVTLike Algorithm BaseShape Model Tessellation2D Tessellation3D Optimization OpenMP::OpenMP_CXX libigl::libigl ${Boost_LIBRARIES})
 set_target_properties(CVTLike PROPERTIES VERSION ${VERSION})
 set_target_properties(CVTLike PROPERTIES CLEAN_DIRECT_OUTPUT 1)
 
